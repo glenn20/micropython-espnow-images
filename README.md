@@ -5,5 +5,7 @@ These are provided as a convenience for users until the ESPNow code is accepted 
 
 These images are compiled from the **espnow-g20*** branches at https://github.com/glenn20/micropython.
 
+The Pull Request for ESPNow support is available at: https://github.com/micropython/micropython/pull/6515.
+
 Provided images include:
 - 
