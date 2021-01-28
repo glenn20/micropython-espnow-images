@@ -7,5 +7,6 @@ These images are compiled from the **espnow-g20*** branches at https://github.co
 
 The Pull Request for ESPNow support is available at: https://github.com/micropython/micropython/pull/6515.
 
-Provided images include:
-- 
+The firmware images are provided in the following folders:
+- **20210128_espnow-g20-v113_gb560287eb**:
+  - Branch *espnow-g20-v113* (commit b560287eb) compiled against Micropython v1.13
