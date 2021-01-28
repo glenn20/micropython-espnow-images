@@ -10,7 +10,7 @@ The Pull Request for ESPNow support is available at: https://github.com/micropyt
 Each folder contains the following firmware images:
 - `firmware-esp32-GENERIC.bin`: For the ESP32 GENERIC build target.
 - `firmware-esp8266-GENERIC_1M.bin`: For the ESP8266 GENERIC_1M build target (1MB RAM devices)
-- `firmware-esp8266-GENERIC.bin`: For the ESP8266 GENERIC build target (2-4MB RAM devices)
+- `firmware-esp8266-GENERIC.bin`: For the ESP8266 GENERIC build target (2+MB RAM devices)
 
 Firmware images are provided in the following folders:
 - `20210128_espnow-g20_gba813d8f9`:
