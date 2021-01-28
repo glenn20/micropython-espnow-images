@@ -21,10 +21,13 @@ Firmware images are provided in the following folders:
 These images are built following the instructions at https://github.com/micropython/micropython/blob/master/ports/esp32/README.md and https://github.com/micropython/micropython/blob/master/ports/esp8266/README.md.
 
 Images can be written to the ESP32 and ESP8266 devices over usb using esptool.py (install using pip), eg:
+
 `
 esptool.py --port /dev/ttyUSB0 --baud 115200 write_flash --flash_size=4MB --flash_mode=qio 0 firmware-esp8266-GENERIC_1M.bin
 `
+
 or
+
 `
 esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 460800 write_flash -z 0x1000 firmware-esp32-GENERIC.bin
 `
