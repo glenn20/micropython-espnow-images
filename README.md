@@ -7,6 +7,10 @@ These images are compiled from the **espnow-g20*** branches at https://github.co
 
 The Pull Request for ESPNow support is available at: https://github.com/micropython/micropython/pull/6515.
 
+Documentation for the ESPNow module can be browsed at: https://micropython-glenn20.readthedocs.io/en/latest/library/espnow.html.
+
+General micropython documentation at: https://docs.micropython.org/en/latest/reference/index.html.
+
 Each folder contains the following firmware images:
 - `firmware-esp32-GENERIC.bin`: For the ESP32 GENERIC build target.
 - `firmware-esp8266-GENERIC_1M.bin`: For the ESP8266 GENERIC_1M build target (1MB RAM devices)
