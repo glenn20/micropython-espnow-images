@@ -27,8 +27,12 @@ Firmware images are provided in the following folders:
   - Branch **espnow-g20-v114** (commit 25840a12a) espnow patches applied against Micropython release **v1.14** on 5 Feb 2021.
 - `20210415_espnow-g20_ga9bbf7083`:
   - Branch **espnow-g20** espnow patches applied against Micropython **master** on 15 April 2021. Updated for fixes in broadcast message handling.
-- `20210419_espnow-g20_g020d5b1d1`:
+- `20210419_espnow-g20_v115_g020d5b1d1`:
   - Branch **espnow-g20** espnow patches applied against Micropython release **v1.15** on 19 April 2021. Updated for fixes in broadcast message handling.
+- `20210511_espnow-g20_g2bb26c0a4`:
+  - Branch **espnow-g20** espnow patches applied against Micropython main branch on 11 May 2021. Updated for fixes in co-existence with wifi and API change for recv()/irecv(). (Build against ESP IDF v4.2.1)
+- `20210511_espnow-g20_v115`:
+  - Branch **espnow-g20** espnow patches applied against Micropython release **v1.15** on 19 April 2021. Updated for fixes in co-existence with wifi and API change for recv()/irecv(). (Build against ESP IDF v4.2.1)
 
 These images are built following the instructions at https://github.com/micropython/micropython/blob/master/ports/esp32/README.md and https://github.com/micropython/micropython/blob/master/ports/esp8266/README.md.
 
