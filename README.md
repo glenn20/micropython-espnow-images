@@ -16,6 +16,21 @@ Each folder contains the following firmware images:
 - `firmware-esp8266-GENERIC_1M.bin`: For the ESP8266 GENERIC_1M build target (1MB RAM devices)
 - `firmware-esp8266-GENERIC.bin`: For the ESP8266 GENERIC build target (2+MB RAM devices)
 
+
+These images are built following the instructions at https://github.com/micropython/micropython/blob/master/ports/esp32/README.md and https://github.com/micropython/micropython/blob/master/ports/esp8266/README.md.
+
+Images can be written to the ESP32 and ESP8266 devices over usb using esptool.py (install using pip), eg:
+
+```
+esptool.py --port /dev/ttyUSB0 --baud 115200 write_flash --flash_size=4MB --flash_mode=qio 0 firmware-esp8266-GENERIC_1M.bin
+```
+
+or
+
+```
+esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 460800 write_flash -z 0x1000 firmware-esp32-GENERIC.bin
+```
+
 Firmware images are provided in the following folders:
 - `20210128_espnow-g20_gba813d8f9`:
   - Branch **espnow-g20** (commit ba813d8f9) espnow patches applied against Micropython **master** on 28 Jan 2021.
@@ -35,17 +50,5 @@ Firmware images are provided in the following folders:
   - Branch **espnow-g20** espnow patches applied against Micropython release **v1.15** on 19 April 2021. Updated for fixes in co-existence with wifi and API change for recv()/irecv(). (Build against ESP IDF v4.2.1)
 - `20210812_espnow-g20_v116`:
   - Branch **espnow-g20** espnow patches applied against Micropython release **v1.16** on 12 August 2021. (See https://github.com/glenn20/micropython/tree/espnow-g20-v116). 
-
-These images are built following the instructions at https://github.com/micropython/micropython/blob/master/ports/esp32/README.md and https://github.com/micropython/micropython/blob/master/ports/esp8266/README.md.
-
-Images can be written to the ESP32 and ESP8266 devices over usb using esptool.py (install using pip), eg:
-
-```
-esptool.py --port /dev/ttyUSB0 --baud 115200 write_flash --flash_size=4MB --flash_mode=qio 0 firmware-esp8266-GENERIC_1M.bin
-```
-
-or
-
-```
-esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 460800 write_flash -z 0x1000 firmware-esp32-GENERIC.bin
-```
+- `20210903_espnow-g20-v1.17`:
+  - Branch **espnow-g20-v1.17** patches applied against Micropython release **v1.17** on 03 September 2021. (See https://github.com/glenn20/micropython/tree/espnow-g20-v1.17).
