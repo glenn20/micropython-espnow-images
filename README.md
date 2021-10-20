@@ -52,3 +52,5 @@ Firmware images are provided in the following folders:
   - Branch **[espnow-g20-v116](https://github.com/glenn20/micropython/tree/espnow-g20-v116)** espnow patches applied against Micropython release **v1.16** on 12 August 2021.
 - [20210903_espnow-g20-v1.17](20210903_espnow-g20-v1.17):
   - Branch **[espnow-g20-v1.17](https://github.com/glenn20/micropython/tree/espnow-g20-v1.17)** patches applied against Micropython release **v1.17** on 03 September 2021.
+- [20211020_espnow-g20-v1.17-g26f058583](20211020_espnow-g20-v1.17-g26f058583): **ESP8266 Only** (Fix for [Issue #7](https://github.com/glenn20/micropython-espnow-images/issues/7))
+  - Branch **[espnow-g20-v1.17](https://github.com/glenn20/micropython/tree/espnow-g20-v1.17)** patches applied against Micropython release **v1.17** on 20 October 2021.
