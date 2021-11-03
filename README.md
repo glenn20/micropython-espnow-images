@@ -54,3 +54,5 @@ Firmware images are provided in the following folders:
   - Branch **[espnow-g20-v1.17](https://github.com/glenn20/micropython/tree/espnow-g20-v1.17)** patches applied against Micropython release **v1.17** on 03 September 2021.
 - [20211020_espnow-g20-v1.17-g26f058583](20211020_espnow-g20-v1.17-g26f058583): **ESP8266 Only** (Fix for [Issue #7](https://github.com/glenn20/micropython-espnow-images/issues/7))
   - Branch **[espnow-g20-v1.17](https://github.com/glenn20/micropython/tree/espnow-g20-v1.17)** patches applied against Micropython release **v1.17** on 20 October 2021.
+- [20211104_espnow-g20-v1.17_ESP32S2](20211104_espnow-g20-v1.17_ESP32S2):
+  - Includes espnow-enabled firmware image for the ESP32S2 (compiled with ESP IDF v4.3.1).
