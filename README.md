@@ -109,3 +109,9 @@ Firmware images are provided in the following folders:
         [tinys2.py](https://github.com/micropython/micropython/blob/v1.17/ports/esp32/boards/UM_TINYS2/modules/tinys2.py)).
       - Unfortunately there is no generic S2 image available for v1.17 with
         SPIRAM support.
+- [2021111_espnow-g20-v1.17-142-g8e1fcd490](2021111_espnow-g20-v1.17-142-g8e1fcd490):
+  - Branch
+    **[espnow-g20-dev](https://github.com/glenn20/micropython/tree/espnow-g20-dev)**
+    applied against Micropython master (ff4f1f3a) on 11 November 2021.
+
+    - Includes latest buffer optimisations and support for on_recv on esp8266.
