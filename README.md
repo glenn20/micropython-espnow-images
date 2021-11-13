@@ -115,3 +115,10 @@ Firmware images are provided in the following folders:
     applied against Micropython master (ff4f1f3a) on 11 November 2021.
 
     - Includes latest buffer optimisations and support for on_recv on esp8266.
+
+- [2021113_espnow-g20-v1.17-142-gbb9aac55a](2021113_espnow-g20-v1.17-142-gbb9aac55a):
+  - Branch
+    **[espnow-g20-dev](https://github.com/glenn20/micropython/tree/espnow-g20-dev)**
+    applied against Micropython master (ff4f1f3a) on 13 November 2021.
+
+    - Includes builds for all of the new esp32 S2/S3/C3 targets. Warning - most of these builds are untested.
