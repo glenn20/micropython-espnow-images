@@ -122,3 +122,11 @@ Firmware images are provided in the following folders:
     applied against Micropython master (ff4f1f3a) on 13 November 2021.
 
     - Includes builds for all of the new esp32 S2/S3/C3 targets. Warning - most of these builds are untested.
+
+- [20220407_espnow-g20-v1.18-3-geaf7fd7d4](20220407_espnow-g20-v1.18-3-geaf7fd7d4):
+  - Branch **[espnow-g20-v1.18](https://github.com/glenn20/micropython/tree/espnow-g20-v1.18)** patches applied against Micropython release v1.18 on 07 April 2022.
+
+    - Includes builds for all of the new esp32 S2/S3/C3 targets.
+      - I have tested GENERIC, UM_TINYS2, UM_FEATHERS2 and GENERIC_S2). The
+        other images are untested.
+    - Built against ESP IDF v4.4 (i2c support may be broken).
