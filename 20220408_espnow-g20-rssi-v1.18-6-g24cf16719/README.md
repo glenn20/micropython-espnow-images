@@ -1,0 +1,2 @@
+- [20220408_espnow-g20-v1.18-6-g24cf16719](20220408_espnow-g20-v1.18-6-g24cf16719):
+  - Branch **[v1.18-6-g24cf16719](https://github.com/glenn20/micropython/tree/v1.18-6-g24cf16719)** patches applied against Micropython release **** on 08 April 2022.
