@@ -53,6 +53,15 @@ esptool.py --chip esp32s2 --port /dev/ttyACM0 write_flash -z 0x1000 firmware-esp
 Firmware images are provided in the following folders:
 
 
+- [20220413_espnow-g20-v1.18-10-ge68d28c8b](20220413_espnow-g20-v1.18-10-ge68d28c8b):
+  - Branch **[espnow-g20-v1.18](https://github.com/glenn20/micropython/tree/espnow-g20-v1.18)** patches applied against Micropython release v1.18 on 13 April 2022.
+    - Includes:
+      - RSSI monitoring support
+      - New asyncio support (aioespnow.py)
+        - (see
+          https://micropython-glenn20.readthedocs.io/en/latest/library/espnow.html#supporting-asyncio-esp32-only)
+      - Removed Buffer Protocol support (including read(), read1(), readinto(),
+        write() methods)
 - [20220408_espnow-g20-rssi-v1.18-6-g24cf16719](20220408_espnow-g20-rssi-v1.18-6-g24cf16719):
   - Branch **[espnow-g20-rssi-v1.18](https://github.com/glenn20/micropython/tree/espnow-g20-rssi-v1.18)** patches applied against Micropython release v1.18 on 08 April 2022.
     - Based on RSSI feature branch
