@@ -61,10 +61,11 @@ Firmware images are provided in the following folders:
           the message out of the buffers before the rssi value is updated in
           e.peers (see docs). This also reduces the workload in the internal
           function (espnow_recv_cb()).
-      - ESP32 images are built with v4.2 IDF
-        - If `micropython.mem_info()` was only showing ~64k RAM, this should be
-          fixed
-      - ESP32S2 and ESP32C3 are built with v4.4 IDF.
+    - ESP32 images are built with v4.2 IDF
+      - If `micropython.mem_info()` was only showing ~64k RAM, this should be
+        fixed
+    - ESP32S2 and ESP32C3 are built with v4.4 IDF.
+    - No new ESP8266 images as there are no differences from prior uploads.
 
 - [20220413_espnow-g20-v1.18-10-ge68d28c8b](20220413_espnow-g20-v1.18-10-ge68d28c8b):
   - Branch **[espnow-g20-v1.18](https://github.com/glenn20/micropython/tree/espnow-g20-v1.18)** patches applied against Micropython release v1.18 on 13 April 2022.
