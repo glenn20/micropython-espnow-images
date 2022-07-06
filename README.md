@@ -51,9 +51,26 @@ esptool.py --chip esp32s2 --port /dev/ttyACM0 write_flash -z 0x1000 firmware-esp
 ```
 
 Firmware images are provided in the following folders:
-
+- [20220706_espnow-g20-v1.19.1-espnow-4-g537248958](20220706_espnow-g20-v1.19.1-espnow-4-g537248958):
+  - Branch
+    **[v1.19.1-espnow-4-g537248958](https://github.com/glenn20/micropython/tree/espnow-g20-v1.19.1)**
+    patches applied against Micropython release **v1.19.1**.
+    - Built on latest espnow-g20 patches rebased against v1.19.1 micropython
+      release tag.
+    - **API Change**:
+      - Use `import espnow` instead of `from esp import espnow`.
+        - This is necessitated by the recent simplification of the C module
+          supported by a python wrapper module: [espnow.py](https://github.com/glenn20/micropython/blob/espnow-g20/ports/esp32/modules/espnow.py).
+      - `.recv()` and `.any()` method supported on esp8266
+      - `.any()` method and iterator support on esp8266
+      - asyncio support on esp8266 (for GENERIC target - ie. devices with >= 2MB
+        flash))
+      - Add `.recvinto()` method for esp32 and esp8266
+    - Updated docs at <https://micropython-glenn20.readthedocs.io/en/latest/library/espnow.html>.
 - [20220423_espnow-g20-v1.18-14-g78cdcdfdc](20220423_espnow-g20-v1.18-14-g78cdcdfdc):
-  - Branch **[espnow-g20-v1.18](https://github.com/glenn20/micropython/tree/espnow-g20-v1.18)** patches applied against Micropython release **v1.18** on 23 April 2022.
+  - Branch
+    **[espnow-g20-v1.18](https://github.com/glenn20/micropython/tree/espnow-g20-v1.18)**
+    patches applied against Micropython release **v1.18** on 23 April 2022.
     - Includes: RSSI monitoring, asyncio support (aioespnow.py)
       - New implementation of RSSI monitoring (no change to user API)
         - RSSI of first message(s) from peer is no longer lost
