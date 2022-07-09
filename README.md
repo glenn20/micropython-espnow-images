@@ -51,6 +51,16 @@ esptool.py --chip esp32s2 --port /dev/ttyACM0 write_flash -z 0x1000 firmware-esp
 ```
 
 Firmware images are provided in the following folders:
+
+- [20220709_espnow-g20-v1.19.1-espnow-6-g44f65965b](20220709_espnow-g20-v1.19.1-espnow-6-g44f65965b):
+  - Branch
+    **[v1.19.1-espnow-6-g44f65965b](https://github.com/glenn20/micropython/tree/v1.19.1-espnow-6-g44f65965b)**
+    patches applied against Micropython release **v1.19.1**.
+    - Fixup for callback methods: **ESPNow.irq()** and **ESPNow.on_recv()**:
+      - See docs at:
+        <https://micropython-glenn20.readthedocs.io/en/latest/library/espnow.html#callback-methods>.
+      - New tests in tools/multi_espnow/15_irq_test.py.
+
 - [20220706_espnow-g20-v1.19.1-espnow-4-g537248958](20220706_espnow-g20-v1.19.1-espnow-4-g537248958):
   - Branch
     **[v1.19.1-espnow-4-g537248958](https://github.com/glenn20/micropython/tree/espnow-g20-v1.19.1)**
