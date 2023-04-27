@@ -32,25 +32,37 @@ and
 <https://github.com/micropython/micropython/blob/master/ports/esp8266/README.md>.
 
 Images can be written to the ESP32 and ESP8266 devices over usb using
-esptool.py (install using pip), eg:
+esptool.py (install using pip), eg, one of:
 
 ```bash
 esptool.py --port /dev/ttyUSB0 --baud 115200 write_flash --flash_size=4MB --flash_mode=qio 0 firmware-esp8266-GENERIC_1M.bin
-```
 
-or
-
-```bash
 esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 460800 write_flash -z 0x1000 firmware-esp32-GENERIC.bin
-```
 
-or
-
-```bash
 esptool.py --chip esp32s2 --port /dev/ttyACM0 write_flash -z 0x1000 firmware-esp32-GENERIC_S2.bin
 ```
 
-Firmware images are provided in the following folders:
+### Micropython v1.20.0 (latest)
+
+- [20230427_espnow-g20-v1.20.0-2-gcc4c716f6](20230427-v1.20.0-espnow-2-gcc4c716f6):
+  - Branch
+    **[espnow-g20-v1.20.0](https://github.com/glenn20/micropython/tree/espnow-g20-v1.20.0)**
+    patches applied against Micropython release **v1.20.0** on 27 April 2023.
+    - API changes following PR review:
+      (see `espnow` [module docs](https://micropython-glenn20.readthedocs.io/en/latest/library/espnow.html)):
+      - Rename `timeout` config option to `timeout_ms`:
+        - `config(timeout=xx)` -> `config(timeout_ms=xx)`
+      - If `timeout_ms < 0`: disable timeout on wait for messages.
+      - Rename `ESPNow.on_recv()` to `ESPNow.irq()`:
+        - Remove optional second argument to `ESPNow.irq()`:
+          - `irq(callback[, arg])` -> `irq(callback)`
+      - Rename `espnow.ETH_ALEN` to `espnow.ADDR_LEN`.
+    - I have been able to test images for the following boards:
+      - esp32: `GENERIC UM_TINYS2 UM_TINYS3 UM_FEATHERS2 UM_FEATHERS3 GENERIC_S2
+        GENERIC_S3`
+      - esp8266: `GENERIC GENERIC_1M`
+
+### Micropython v1.19.1
 
 - [20220709_espnow-g20-v1.19.1-espnow-6-g44f65965b](20220709_espnow-g20-v1.19.1-espnow-6-g44f65965b):
   - Branch
@@ -61,7 +73,7 @@ Firmware images are provided in the following folders:
         <https://micropython-glenn20.readthedocs.io/en/latest/library/espnow.html#callback-methods>.
       - New tests in tools/multi_espnow/15_irq_test.py.
 
-- [20220706_espnow-g20-v1.19.1-espnow-4-g537248958](20220706_espnow-g20-v1.19.1-espnow-4-g537248958):
+<!-- - [20220706_espnow-g20-v1.19.1-espnow-4-g537248958](20220706_espnow-g20-v1.19.1-espnow-4-g537248958):
   - Branch
     **[v1.19.1-espnow-4-g537248958](https://github.com/glenn20/micropython/tree/espnow-g20-v1.19.1)**
     patches applied against Micropython release **v1.19.1**.
@@ -76,7 +88,10 @@ Firmware images are provided in the following folders:
       - asyncio support on esp8266 (for GENERIC target - ie. devices with >= 2MB
         flash))
       - Add `.recvinto()` method for esp32 and esp8266
-    - Updated docs at <https://micropython-glenn20.readthedocs.io/en/latest/library/espnow.html>.
+    - Updated docs at <https://micropython-glenn20.readthedocs.io/en/latest/library/espnow.html>. -->
+
+### Micropython v1.18
+
 - [20220423_espnow-g20-v1.18-14-g78cdcdfdc](20220423_espnow-g20-v1.18-14-g78cdcdfdc):
   - Branch
     **[espnow-g20-v1.18](https://github.com/glenn20/micropython/tree/espnow-g20-v1.18)**
@@ -94,7 +109,7 @@ Firmware images are provided in the following folders:
     - ESP32S2 and ESP32C3 are built with v4.4 IDF.
     - No new ESP8266 images as there are no differences from prior uploads.
 
-- [20220413_espnow-g20-v1.18-10-ge68d28c8b](20220413_espnow-g20-v1.18-10-ge68d28c8b):
+<!-- - [20220413_espnow-g20-v1.18-10-ge68d28c8b](20220413_espnow-g20-v1.18-10-ge68d28c8b):
   - Branch **[espnow-g20-v1.18](https://github.com/glenn20/micropython/tree/espnow-g20-v1.18)** patches applied against Micropython release v1.18 on 13 April 2022.
     - Includes:
       - RSSI monitoring support
@@ -107,13 +122,16 @@ Firmware images are provided in the following folders:
   - Branch **[espnow-g20-rssi-v1.18](https://github.com/glenn20/micropython/tree/espnow-g20-rssi-v1.18)** patches applied against Micropython release v1.18 on 08 April 2022.
     - Based on RSSI feature branch
       - Includes support for monitoring RSSI values of recieved messages.
-    - Built against ESP IDF v4.4 (i2c support may be broken).
-- [20220407_espnow-g20-v1.18-3-geaf7fd7d4](20220407_espnow-g20-v1.18-3-geaf7fd7d4):
+    - Built against ESP IDF v4.4 (i2c support may be broken). -->
+<!-- - [20220407_espnow-g20-v1.18-3-geaf7fd7d4](20220407_espnow-g20-v1.18-3-geaf7fd7d4):
   - Branch **[espnow-g20-v1.18](https://github.com/glenn20/micropython/tree/espnow-g20-v1.18)** patches applied against Micropython release v1.18 on 07 April 2022.
     - Includes builds for all of the new esp32 S2/S3/C3 targets.
       - I have tested GENERIC, UM_TINYS2, UM_FEATHERS2 and GENERIC_S2). The
         other images are untested.
-    - Built against ESP IDF v4.4 (i2c support may be broken).
+    - Built against ESP IDF v4.4 (i2c support may be broken). -->
+
+### Micropython v1.17
+
 - [2021113_espnow-g20-v1.17-142-gbb9aac55a](2021113_espnow-g20-v1.17-142-gbb9aac55a):
   - Branch
     **[espnow-g20-dev](https://github.com/glenn20/micropython/tree/espnow-g20-dev)**
@@ -121,7 +139,7 @@ Firmware images are provided in the following folders:
 
     - Includes builds for all of the new esp32 S2/S3/C3 targets. Warning - most of these builds are untested.
 
-- [20211111_espnow-g20-v1.17-142-g8e1fcd490](20211111_espnow-g20-v1.17-142-g8e1fcd490):
+<!-- - [20211111_espnow-g20-v1.17-142-g8e1fcd490](20211111_espnow-g20-v1.17-142-g8e1fcd490):
   - Branch
     **[espnow-g20-dev](https://github.com/glenn20/micropython/tree/espnow-g20-dev)**
     applied against Micropython master (ff4f1f3a) on 11 November 2021.
@@ -183,4 +201,4 @@ Firmware images are provided in the following folders:
     against Micropython release **v1.13** on 28 Jan 2021.
 - [20210128_espnow-g20_gba813d8f9](20210128_espnow-g20_gba813d8f9):
   - Branch **espnow-g20** (commit ba813d8f9) espnow patches applied against
-    Micropython **master** on 28 Jan 2021.
+    Micropython **master** on 28 Jan 2021. -->
