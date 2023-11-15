@@ -1,6 +1,16 @@
 # Precompiled Micropython ESPNow Images for the ESP32 and ESP8266
 
-A collection of pre-compiled micropython images (including espnow support) for
+## NOTE: Do not use - ESPNow is now available in micropython by default.
+
+This collection of espnow-enabled micropython images is no longer supported or necessary. 
+ESPNow support has been available in production micropython images since the v1.21.0 release. 
+
+Please obtain ESPNow enabled micropython images from 
+<https://micropython.org/download?port=esp32>.
+
+## If you really must...
+
+A collection of pre-compiled, **pre-v1.21.0** micropython images (including espnow support) for
 the esp32 and esp8266.
 
 These are provided as a convenience for users until the ESPNow code is
@@ -42,7 +52,7 @@ esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 460800 write_flash -z 0x1000 
 esptool.py --chip esp32s2 --port /dev/ttyACM0 write_flash -z 0x1000 firmware-esp32-GENERIC_S2.bin
 ```
 
-### Micropython v1.20.0 (latest)
+### Micropython v1.20.0
 
 - [20230427_espnow-g20-v1.20.0-2-gcc4c716f6](20230427-v1.20.0-espnow-2-gcc4c716f6):
   - Branch
